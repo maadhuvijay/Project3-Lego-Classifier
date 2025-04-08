@@ -154,7 +154,7 @@ For optimization and achieve better results, regularization technique was explor
 The model was evaluated by measuring the "Accuracy and the loss function" parameters and by plotting these values as diagnostic curves. 
 
 **Observation 1:**
-Immediately after removing the random rotation augmentation function (which caused blank images and distorted images), there was better diagnostic results. 
+Immediately after removing the random rotation augmentation function (which caused blank images and distorted images), we could see better diagnostic results. 
 
 ![image](https://github.com/user-attachments/assets/8b01c415-0439-46d7-bd5b-fc0f773e4598)
 ![image](https://github.com/user-attachments/assets/6765b59d-d968-4078-b241-c64161288765)
@@ -189,7 +189,7 @@ The model was tested with some of the X_test image data and confirmed the predic
 
 
 
-## Gradio - User Inferface
+## Gradio - User Interface
 
 Gradio app interface was used to upload and test input demo images. The app uploads an image  through the input component and displays the lego probabilities and a text to speech conversion of the predicted lego id as the output components. 
 
