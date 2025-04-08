@@ -162,6 +162,7 @@ Observation 2:
 
 ## Gradio - User Inferface
 
+![image](https://github.com/user-attachments/assets/2d3b6549-e60c-42a6-8230-53d24e282479)
 
 
 ## Reference
