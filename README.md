@@ -5,6 +5,7 @@ Many households accumulate large collections of LEGO pieces that children lose i
 that identifies individual LEGO pieces and recommends sets that can be built using them provides a practical solution, making better use of existing 
 LEGO collections.
 
+## Dataset installation
 ## Dataset collection
 
 1. Source: Lego images from Kaggle [https://www.kaggle.com/code/stpeteishii/lego-bricks-classify-torch-linear-conv2d]
@@ -210,6 +211,10 @@ The input images were also pre-processed with below steps, the same way as the d
 Open AI text to speech library was used to spell out the predicted lego id. 
 
 ## Reference
+1. [https://www.kaggle.com/code/stpeteishii/lego-bricks-classify-torch-linear-conv2d]
+2. https://www.analyticsvidhya.com/blog/2019/10/building-image-classification-models-cnn-pytorch/
+3. https://medium.com/intelligentmachines/convolutional-neural-network-and-regularization-techniques-with-tensorflow-and-keras-5a09e6e65dc7
+4. https://chatgpt.com/
 
 
    
