@@ -154,7 +154,7 @@ For optimization and achieve better results, regularization technique was explor
 The model was evaluated by measuring the "Accuracy and the loss function" parameters and by plotting these values as diagnostic curves. 
 
 **Observation 1:**
-Immediately after removing the random rotation augmentation function (which caused blank images and distorted images), there was a difference in the diagnostic results. 
+Immediately after removing the random rotation augmentation function (which caused blank images and distorted images), there was better diagnostic results. 
 
 ![image](https://github.com/user-attachments/assets/8b01c415-0439-46d7-bd5b-fc0f773e4598)
 ![image](https://github.com/user-attachments/assets/6765b59d-d968-4078-b241-c64161288765)
