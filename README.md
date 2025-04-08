@@ -1,5 +1,9 @@
-# Project-3-AI-Bootcamp
+# Project-3: AI - powered Lego classifier
+The AI-powered LEGO classifier will use a neural network model to classify the LEGO images into its corresponding design number.
 
+Many households accumulate large collections of LEGO pieces that children lose interest in, while parents are unsure how to repurpose them. A model 
+that identifies individual LEGO pieces and recommends sets that can be built using them provides a practical solution, making better use of existing 
+LEGO collections.
 
 ## Dataset collection
 
@@ -16,7 +20,7 @@ The lego image was printed / plotted to ensure the import was successful.
 
 ## Data Pre-processing
 
-Below pre-processing steps were done on the lego images. 
+The images were pre-processed implementing the below steps.
 
 #### Re-sizing of the images:
 
@@ -28,7 +32,7 @@ Initially the images were re-sized to 60 x 60 but then there was a difference in
 #### Edge detection and Dilation of edges:
 
 
-   **Edge Detection** detects sharp changes in intensity Canny Edge Detection was implemented
+   **Edge Detection** detects sharp changes in intensity and Canny Edge Detection was implemented
 
    ![image](https://github.com/user-attachments/assets/d0bd86d0-70b2-4e69-9eab-eb39af337b87)
 
@@ -39,15 +43,15 @@ Initially the images were re-sized to 60 x 60 but then there was a difference in
   
 #### Normalization of the images 
 
-    To change the image pixel values to be between 0 and 1.   
+    The images were normalized to change the image pixel values to be between 0 and 1.   
 
 #### Padding
 
 Padding turned out be an important step in getting more accuracy in this model training
 
-The images were padded by re-sizing it into 128 x 128 within the image frame.This was done because, after augmentation images with bigger brick size were not fitting inside the frame and created extra pixels and had part of the image truncated, distorted.
+The images were padded by re-sizing it into 128 x 128 within the image frame.This was done because, after augmentation, the images with bigger brick size were not fitting inside the frame and created extra pixels and had part of the image truncated or distorted.
 
-**Before padding** [Note: During the augmentation analysis, I intermittently removed the edge detection and dilating edges transformations from pre-processing and that is why the before padding images are different]
+**Before padding** [Note: During the augmentation analysis, I intermittently removed the edge detection and dilating edges transformations from pre-processing and that is the reason the before padding images are different]
 
    ![image](https://github.com/user-attachments/assets/f9450e9a-2ff6-4b4a-8142-be0f784b7669)
    ![image](https://github.com/user-attachments/assets/7f858ede-bf30-4ea1-82e9-136d0666831b)
@@ -72,7 +76,8 @@ Below **random transformations** were initially considered.
    3. RandomFlip('horizontal'),
    4. Random Zoom
 
-Problems identified with Random roatation, and random translation transformations [ Images with extra pixels and blank images]
+     
+Problems identified with Random roatation,Random contrast, brightness and random translation transformations [ Images with extra pixels and blank images]
 
    ![image](https://github.com/user-attachments/assets/aeee6718-aad3-43f9-b2df-e96930669456)
    ![image](https://github.com/user-attachments/assets/015ae759-b606-4154-8bc8-818c83d299e4)
@@ -116,7 +121,7 @@ The model was trained with
 
 ## Model Optimization
 
-4 models were built : 1 main model and 3 models to analyze the below optimatization techniques.
+For optimization and achieve better results, regularization technique was explored. 4 models were built : 1 main model and 3 models to analyze the below optimatization techniques.
 
 1. **L1 regularization** 
 
@@ -128,7 +133,7 @@ The model was trained with
 
 2. **L2 regularization**
 
-   For this analysis, the model was run with L2 regularizer values as 0.01.The results were analyzed with the accuracy and loss values plotted as curves. In this analysis the accuracy curves seemed to be somewhat in sync and the loss values were lesser comparatively to the L1 regularization.
+   For this analysis, the model was run with L2 regularizer values as 0.01.The results were analyzed with the accuracy and loss values plotted as curves. In this analysis the accuracy curves seemed to be somewhat in sync and the loss values were less comparative to the L1 regularization.
 
    ![image](https://github.com/user-attachments/assets/a2d91fe9-8013-4d28-83c5-b4bd6521b0bd)
    ![image](https://github.com/user-attachments/assets/9eabd546-c69d-4c30-97a0-d66116c21692)
@@ -147,23 +152,62 @@ The model was trained with
 
 The model was evaluated by measuring the "Accuracy and the loss function" parameters and by plotting these values as diagnostic curves. 
 
-Observation 1:
+**Observation 1:**
 Immediately after removing the random rotation augmentation function (which caused blank images and distorted images), there was a difference in the diagnostic results. 
 
 ![image](https://github.com/user-attachments/assets/8b01c415-0439-46d7-bd5b-fc0f773e4598)
 ![image](https://github.com/user-attachments/assets/6765b59d-d968-4078-b241-c64161288765)
 
-Observation 2:
+**Observation 2:**
+When I removed all the random transformations and just had the random flip (horizontal), there was no image distortions as the images didn't have much change. Looking at the below graphs there was a gap between the validation loss and the training loss. This meant the training data is insufficient.
 
+![image](https://github.com/user-attachments/assets/5c0e8d5c-76b7-42a7-8bcd-61e5cc1a69ad)
+![image](https://github.com/user-attachments/assets/ef4706de-1c56-4178-9ce4-c6075d06aee0)
 
+**Observation 3:**
+After the above observation, I increased the training data by increasing the augmentation count for each image. With couple times trying out with different images count, was able to see the below perfect graphs. But since the image is not going through a varied random transformation through this approach, I decided to add more random transformations to the augmentation process. 
 
+![image](https://github.com/user-attachments/assets/c0194011-b177-4139-8554-ef177fd4ce29)
+![image](https://github.com/user-attachments/assets/1d43db50-da4b-4fd2-8184-6005fd61a52e)
+
+**Final test results:**
+
+![image](https://github.com/user-attachments/assets/bc568204-5cdb-486e-8acd-f871238e8828)
+
+![image](https://github.com/user-attachments/assets/eb37b00c-c919-4641-8a68-96986e4b01b7)
+![image](https://github.com/user-attachments/assets/d51abe78-0376-4505-9110-a87225480811)
 
 ## Model prediction
 
+The model was tested with some of the X_test image data and confirmed the predictions are correct. 
+
+![image](https://github.com/user-attachments/assets/d3f4d99d-a493-410a-981a-7190e31ea6a1)
+
+![image](https://github.com/user-attachments/assets/a2bc7128-7184-429e-a678-8d7280206e1d)
+![image](https://github.com/user-attachments/assets/98e6d1f3-6885-4d92-8b4f-f46302225517)
+
+
+
 ## Gradio - User Inferface
+
+Gradio app interface was used to upload and test input demo images. The app uploads an image  through the input component and displays the lego probabilities and a text to speech conversion of the predicted lego id as the output components. 
 
 ![image](https://github.com/user-attachments/assets/2d3b6549-e60c-42a6-8230-53d24e282479)
 
+
+**Input image processing**
+The input images were also pre-processed with below steps, the same way as the dataset and then fed to the model for prediction.
+
+1. Image resizing.
+2. Edge detection.
+3. Dilation of edges
+4. Padding of images
+5. Normalization of images
+6. Add the channel dimensions
+
+   
+**Text to Speech**
+Open AI text to speech library was used to spell out the predicted lego id. 
 
 ## Reference
 
