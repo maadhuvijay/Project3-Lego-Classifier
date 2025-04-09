@@ -1,4 +1,4 @@
-# Project-3: AI - powered Lego classifier
+# Project-3: AI - Powered Lego Classifier
 The AI-powered LEGO classifier will use a neural network model to classify the LEGO images into its corresponding design number.
 
 Many households accumulate large collections of LEGO pieces that children lose interest in, while parents are unsure how to repurpose them. A model 
@@ -6,6 +6,10 @@ that identifies individual LEGO pieces and recommends sets that can be built usi
 LEGO collections.
 
 ## Dataset installation
+
+1. Link for the google drive shared folder is available in the resources sections. Those images needs to be downloaded used in the code.
+2. The Gradiio demo images are available in a zip folder in the Data folder and should be used for uploading the images for predictions. Though these images are from the Lego sites, the size of these images matches with the training data. Bigger sized images might need more size resizing and processing.
+   
 ## Dataset collection
 
 1. Source: Lego images from Kaggle [https://www.kaggle.com/code/stpeteishii/lego-bricks-classify-torch-linear-conv2d]
