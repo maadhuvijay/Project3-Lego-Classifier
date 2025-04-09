@@ -48,7 +48,7 @@ Initially the images were re-sized to 60 x 60 but then there was a difference in
   
 #### Normalization of the images 
 
-    The images were normalized to change the image pixel values to be between 0 and 1.   
+    The images were converted to array and normalized by dividing by 255 to change the pixel values to be between 0 and 1.   
 
 #### Padding
 
