@@ -5,6 +5,42 @@ Many households accumulate large collections of LEGO pieces that children lose i
 that identifies individual LEGO pieces and recommends sets that can be built using them provides a practical solution, making better use of existing 
 LEGO collections.
 
+## Tech Stack
+
+**Machine Learning & Deep Learning**
+1. **TensorFlow / Keras:*
+   Core deep learning framework for building and training neural networks.
+
+   tensorflow, keras, layers, optimizers, callbacks like EarlyStopping
+
+2. **scikit-learn:**
+   Utilities for data preprocessing and model evaluation.
+
+   train_test_split, OneHotEncoder
+
+**Computer Vision & Image Processing**
+1. OpenCV (cv2):
+   Image loading, manipulation, and preprocessing.
+
+2. PIL (Pillow):
+   Additional image handling capabilities.
+
+3. Matplotlib:
+   Image visualization and plotting support.
+
+**User Interface & Interaction**
+1. **Gradio:**
+   For building interactive web UIs for your model (e.g., upload image, get prediction).
+
+2. **pyttsx3:**
+   Local text-to-speech engine (offline, unlike OpenAI’s TTS).
+   
+**Networking / API**
+
+1. **OpenAI API (openai):**
+   For integrating advanced services like:
+   Text-to-Speech (TTS)
+
 ## Dataset installation
 
 1. Link for the google drive shared folder is available in the resources sections. Those images needs to be downloaded used in the code.
