@@ -8,7 +8,7 @@ LEGO collections.
 ## Tech Stack
 
 **Machine Learning & Deep Learning**
-1. **TensorFlow / Keras:*
+1. **TensorFlow / Keras:**
    Core deep learning framework for building and training neural networks.
 
    tensorflow, keras, layers, optimizers, callbacks like EarlyStopping
@@ -19,13 +19,13 @@ LEGO collections.
    train_test_split, OneHotEncoder
 
 **Computer Vision & Image Processing**
-1. OpenCV (cv2):
+1. **OpenCV (cv2):**
    Image loading, manipulation, and preprocessing.
 
-2. PIL (Pillow):
+2. **PIL (Pillow):**
    Additional image handling capabilities.
 
-3. Matplotlib:
+3. **Matplotlib:**
    Image visualization and plotting support.
 
 **User Interface & Interaction**
