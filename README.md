@@ -210,9 +210,11 @@ The input images were also pre-processed with below steps, the same way as the d
 5. Normalization of images
 6. Add the channel dimensions
 
-   
-**Text to Speech**
-Open AI text to speech library was used to spell out the predicted lego id. 
+
+
+**OpenAI Text-to-Speech (TTS)** 
+
+As part of enhancing the user interaction experience for the LEGO Classifier Project, OpenAI's Text-to-Speech (TTS) technology is integrated into the Gradio interface to provide natural-sounding audio feedback. This allows the system to verbally announce the identified LEGO bricks making it more engaging and accessible—especially for kids and visually impaired users.
 
 ## Reference
 1. [https://www.kaggle.com/code/stpeteishii/lego-bricks-classify-torch-linear-conv2d]
