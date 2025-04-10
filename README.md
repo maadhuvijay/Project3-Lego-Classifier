@@ -50,7 +50,7 @@ LEGO collections.
 
 1. Source: Lego images from Kaggle [https://www.kaggle.com/code/stpeteishii/lego-bricks-classify-torch-linear-conv2d]
 2. Image selection: Each lego piece has 800 images. Total 1132 Images for 4 lego brick pieces -2357, 3001,3010,3022 [283 each] were chosen
-3. Lego images used: The front and top angle of pieces were chosed. 
+3. Lego images used: The front and top angle of pieces were chosen. 
 
 ## Data Visualization
 The lego image was printed / plotted to ensure the import was successful.
