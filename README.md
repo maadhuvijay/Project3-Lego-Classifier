@@ -15,7 +15,7 @@ LEGO collections.
 
 2. **scikit-learn:**
    Utilities for data preprocessing and model evaluation.
-
+   
    train_test_split, OneHotEncoder
 
 **Computer Vision & Image Processing**
@@ -30,10 +30,10 @@ LEGO collections.
 
 **User Interface & Interaction**
 1. **Gradio:**
-   For building interactive web UIs for your model (e.g., upload image, get prediction).
+   For building interactive web UIs for the model (e.g., upload image, get prediction).
 
 2. **pyttsx3:**
-   Local text-to-speech engine (offline, unlike OpenAI’s TTS).
+   Local text-to-speech engine (offline).
    
 **Networking / API**
 
